@@ -16,7 +16,7 @@ const Navbar = () => {
         >
           <Link href="/">
             <Image
-              src={"/logo.jpg"}
+              src={"/Logo.jpg"}
               alt={"logo"}
               width={70}
               height={70}

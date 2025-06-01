@@ -44,7 +44,7 @@ const ProductCard = ({ product }: Props) => {
       </CardHeader>
       <CardContent>
         <Image
-          src={"https://placehold.co/800.png"}
+          src={"/placeholder.png"}
           className="rounded-lg"
           width={700}
           height={700}
@@ -76,7 +76,7 @@ const ProductCard = ({ product }: Props) => {
               <Plus />
             </Button>
           </div>
-          <Button variant={"secondary"} className="shadow-md">
+          <Button variant={"secondary"} className="text-md font-bold shadow-md">
             Añadir al carrito
           </Button>
         </div>
