@@ -38,7 +38,7 @@ const ProductCard = ({ product }: Props) => {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="xl:h-45">
         <CardTitle className="text-3xl">{product.title}</CardTitle>
         <CardDescription>{product.description}</CardDescription>
       </CardHeader>
@@ -53,8 +53,9 @@ const ProductCard = ({ product }: Props) => {
       </CardContent>
       <CardFooter>
         <div className="flex w-full items-center justify-between">
-          <div className="flex gap-2">
+          <div className="flex gap-0.5">
             <Button
+              size="icon"
               onClick={handleDecrement}
               variant={"ghost"}
               className="rounded-full"
@@ -67,6 +68,7 @@ const ProductCard = ({ product }: Props) => {
               className="w-10 px-0 text-center shadow-xs"
             />
             <Button
+              size="icon"
               onClick={handleIncrement}
               variant="ghost"
               className="rounded-full"
