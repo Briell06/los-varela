@@ -63,9 +63,10 @@ const ProductCard = ({ product }: Props) => {
               <Minus />
             </Button>
             <Input
-              value={amount}
+              type="number"
+              value={amount.toFixed(0)}
               onChange={handleChange}
-              className="w-10 px-0 text-center shadow-xs"
+              className="w-10 [appearance:textfield] px-0 text-center shadow-xs [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             />
             <Button
               size="icon"
