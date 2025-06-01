@@ -7,7 +7,7 @@ import ColorModeButton from "./ColorModeButton";
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 mx-4 mt-3">
+    <header className="sticky top-0 z-50 mx-4 mt-3">
       <nav>
         <div
           className={
