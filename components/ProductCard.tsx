@@ -1,6 +1,6 @@
 "use client";
 import { Product } from "@/utils/types";
-import { Minus, Plus } from "lucide-react";
+import { Minus, Plus, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { Button } from "./ui/button";
@@ -44,7 +44,7 @@ const ProductCard = ({ product }: Props) => {
       </CardHeader>
       <CardContent>
         <Image
-          src={"/placeholder.png"}
+          src={product.thumbnail}
           className="rounded-lg"
           width={700}
           height={700}
@@ -78,6 +78,7 @@ const ProductCard = ({ product }: Props) => {
             </Button>
           </div>
           <Button variant={"secondary"} className="text-md font-bold shadow-md">
+            <ShoppingCart />
             Añadir al carrito
           </Button>
         </div>
