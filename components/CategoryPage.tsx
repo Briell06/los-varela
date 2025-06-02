@@ -11,7 +11,7 @@ const CategoryPage = async ({ products, category }: PageProps) => {
   );
   return (
     <main role="main" className="container mx-auto">
-      <div className="mt-4mx-3">
+      <div className="mt-4 mx-3">
         <CategoryCarousel />
       </div>
       <div className="mx-4 mt-3">
