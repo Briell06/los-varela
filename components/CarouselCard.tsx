@@ -16,7 +16,7 @@ const CarouselCard = ({ category }: { category: string }) => {
       <Card className="h-11/12 w-full" onClick={handleClick}>
         <CardHeader>
           <Image
-            src="/placeholder.png"
+            src={`/logo.jpg`}
             height={80}
             width={80}
             alt="imagen de la categoría"
