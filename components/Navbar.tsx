@@ -8,8 +8,8 @@ import ShoppingCartButton from "./ShoppingCardButton";
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 mx-4 mt-3">
-      <nav>
+    <header className="sticky top-0 z-50 mx-4 mt-3" role="banner">
+      <nav role="navigation">
         <div
           className={
             "container mx-auto flex items-center justify-between rounded-3xl bg-white px-3 py-3 text-gray-800 shadow-md shadow-gray-200 ring-gray-100 md:justify-around dark:bg-gray-900 dark:text-white dark:shadow-lg dark:shadow-black"

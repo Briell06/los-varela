@@ -21,7 +21,7 @@ const Home = async ({ searchParams }: Props) => {
   if (category) return <CategoryPage products={products} category={category} />;
 
   return (
-    <main className="container mx-auto">
+    <>
       <CategoryCarousel />
       <h3 className="text-center text-3xl font-bold">Todos los Productos</h3>
       <div className="grid-layout">
@@ -29,7 +29,7 @@ const Home = async ({ searchParams }: Props) => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-    </main>
+    </>
   );
 };
 export default Home;

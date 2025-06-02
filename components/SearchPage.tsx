@@ -12,7 +12,7 @@ const SearchPage = async ({ products, search }: PageProps) => {
   });
 
   return (
-    <main>
+    <>
       <div className="mx-4 mt-3">
         <Link href="/">
           <Button variant="outline">
@@ -37,7 +37,7 @@ const SearchPage = async ({ products, search }: PageProps) => {
           ))}
         </div>
       </div>
-    </main>
+    </>
   );
 };
 
