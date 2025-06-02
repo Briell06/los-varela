@@ -38,11 +38,11 @@ const ProductCard = ({ product }: Props) => {
 
   return (
     <Card>
-      <CardHeader className="xl:h-45">
+      <CardHeader className="lg:h-50 xl:h-45">
         <CardTitle className="text-3xl">{product.title}</CardTitle>
         <CardDescription>{product.description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="relative my-auto">
         <Image
           src={product.thumbnail}
           className="rounded-lg"
@@ -50,6 +50,9 @@ const ProductCard = ({ product }: Props) => {
           height={700}
           alt="image"
         />
+        <span className="absolute top-0 text-2xl font-bold">
+          {product.price}
+        </span>
       </CardContent>
       <CardFooter>
         <div className="flex w-full items-center justify-between">
@@ -77,7 +80,10 @@ const ProductCard = ({ product }: Props) => {
               <Plus />
             </Button>
           </div>
-          <Button variant={"secondary"} className="text-md font-bold shadow-md">
+          <Button
+            variant={"secondary"}
+            className="text-md font-bold shadow-md dark:shadow-black"
+          >
             <ShoppingCart />
             Añadir al carrito
           </Button>

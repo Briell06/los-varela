@@ -1,3 +1,9 @@
+export interface PageProps {
+  products: Product[];
+  search?: string;
+  category?: string;
+}
+
 export interface ProductsFetchResponse {
   products: Product[];
   total: number;

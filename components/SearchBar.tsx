@@ -10,7 +10,7 @@ export default function SearchBar() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col items-center justify-center px-4">
+    <div className="mx-auto flex flex-1 items-center justify-center px-4 md:w-[40vw]">
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onSubmit={() => {

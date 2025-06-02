@@ -15,7 +15,6 @@ const ColorModeButton = () => {
     setMounted(true);
   }, []);
 
-  // Renderizar un placeholder mientras se monta para evitar cambios de diseño
   if (!mounted) {
     return (
       <div className="h-10 w-10 animate-pulse rounded-full bg-gray-200 dark:bg-gray-700"></div>
