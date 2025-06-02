@@ -6,7 +6,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="grid min-h-screen grid-rows-[auto_1fr_auto] select-none">
       <Navbar />
-      <main className="container mx-auto">{children}</main>
+        {children
       <Footer />
     </div>
   );
