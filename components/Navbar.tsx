@@ -8,7 +8,7 @@ import ShoppingCartButton from "./ShoppingCardButton";
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 mx-4 mt-3" role="navigation">
+    <header className="sticky top-0 z-50 mx-4 mt-3" role="banner">
       <nav role="navigation">
         <div
           className={

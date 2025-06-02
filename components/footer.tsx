@@ -5,7 +5,7 @@ import { Copyright } from "lucide-react";
 function Footer() {
   return (
     <footer
-      role="footer"
+      role="contentinfo"
       className="mt-auto bg-gray-50 py-10 text-center text-gray-800 shadow-lg dark:bg-slate-900 dark:text-gray-300"
     >
       <div className="container mx-auto px-4">
