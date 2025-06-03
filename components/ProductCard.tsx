@@ -59,6 +59,9 @@ const ProductCard = ({ product }: Props) => {
           <div className="flex gap-0.5">
             <Button
               size="icon"
+              role="button"
+              aria-labelledby="decrementar cantidad"
+              aria-label="decrementar cantidad"
               onClick={handleDecrement}
               variant={"ghost"}
               className="rounded-full"
@@ -67,12 +70,17 @@ const ProductCard = ({ product }: Props) => {
             </Button>
             <Input
               type="number"
+              aria-label="cantidad"
+              aria-describedby="cantidad de productos"
               value={amount.toFixed(0)}
               onChange={handleChange}
               className="w-10 [appearance:textfield] px-0 text-center shadow-xs [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             />
             <Button
               size="icon"
+              role="button"
+              aria-label="incrementar cantidad"
+              aria-labelledby="incrementar cantidad"
               onClick={handleIncrement}
               variant="ghost"
               className="rounded-full"
@@ -81,6 +89,7 @@ const ProductCard = ({ product }: Props) => {
             </Button>
           </div>
           <Button
+            aria-label="añadir al carrito"
             variant={"secondary"}
             className="text-md font-bold shadow-md dark:shadow-black"
           >
