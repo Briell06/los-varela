@@ -10,8 +10,8 @@ const CategoryPage = async ({ products, category }: PageProps) => {
     (product) => product.category.toLowerCase() === category?.toLowerCase(),
   );
   return (
-    <main role="main" className="container mx-auto">
-      <div className="mt-4 mx-3">
+    <>
+      <div className="mx-3 mt-4">
         <CategoryCarousel />
       </div>
       <div className="mx-4 mt-3">

@@ -12,7 +12,7 @@ const SearchPage = async ({ products, search }: PageProps) => {
   });
 
   return (
-    <main role="main" className="container mx-auto">
+    <>
       <div className="mx-4 mt-3">
         <Link href="/">
           <Button variant="outline">
