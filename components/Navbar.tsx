@@ -21,7 +21,7 @@ const Navbar = () => {
               alt={"logo"}
               width={70}
               height={70}
-              className="rounded-full object-contain"
+              className="left-0 rounded-full object-contain"
             />
             <p className="text-2xl font-bold max-md:hidden">Los Varela</p>
           </Link>

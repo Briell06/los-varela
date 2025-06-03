@@ -2,19 +2,16 @@ import CategoryCarousel from "@/components/CategoryCarousel";
 import CategoryPage from "@/components/CategoryPage";
 import ProductCard from "@/components/ProductCard";
 import SearchPage from "@/components/SearchPage";
-import { ProductsFetchResponse } from "@/utils/types";
+import fetchProducts from "@/hooks/fetchProducts";
 
 interface Props {
   searchParams: Promise<{ search?: string; category?: string }>;
 }
 
 const Home = async ({ searchParams }: Props) => {
-  const search = (await searchParams).search;
+  const products = await fetchProducts();
   const category = (await searchParams).category;
-  const { products }: ProductsFetchResponse = await fetch(
-    "https://dummyjson.com/products",
-    { next: { revalidate: 60 } },
-  ).then((res) => res.json());
+  const search = (await searchParams).search;
 
   if (search) return <SearchPage products={products} search={search} />;
 
