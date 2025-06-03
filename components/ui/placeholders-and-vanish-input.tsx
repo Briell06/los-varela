@@ -181,7 +181,7 @@ export function PlaceholdersAndVanishInput({
   };
   return (
     <>
-      <label htmlFor="form-vanish hidden">form vanish</label>
+      <label htmlFor="form-vanish"></label>
       <form
         id="form-vanish"
         className={cn(
