@@ -2,7 +2,7 @@ import CategoryCarousel from "@/components/CategoryCarousel";
 import CategoryPage from "@/components/CategoryPage";
 import ProductCard from "@/components/ProductCard";
 import SearchPage from "@/components/SearchPage";
-import fetchProducts from "@/hooks/fetchProducts";
+import { fetchProducts } from "@/fetch/fetchProducts";
 
 interface Props {
   searchParams: Promise<{ search?: string; category?: string }>;
@@ -21,11 +21,11 @@ const Home = async ({ searchParams }: Props) => {
     <>
       <CategoryCarousel />
       <h3 className="text-center text-3xl font-bold">Todos los Productos</h3>
-      <div className="grid-layout">
+      <section className="grid-layout">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </div>
+      </section>
     </>
   );
 };
