@@ -17,9 +17,7 @@ const ProductSkeleton = () => {
             <Skeleton className="h-8 w-3/4" />
           </CardTitle>
           <CardDescription>
-            <Skeleton className="h-6 w-5/6" />
-            <Skeleton className="mt-2 h-6 w-5/6" />
-            <Skeleton className="mt-2 h-6 w-4/5" />
+            <Skeleton className="h-6 w-2/6" />
           </CardDescription>
         </CardHeader>
         <CardContent className="relative my-auto">

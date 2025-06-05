@@ -5,8 +5,13 @@ import "./globals.css";
 
 const raleway = localFont({
   src: [
-    { path: "./fonts/Raleway-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/Raleway-Black.ttf", weight: "900", style: "normal" },
+    { path: "./fonts/Raleway-ExtraBold.ttf", weight: "800", style: "normal" },
     { path: "./fonts/Raleway-Bold.ttf", weight: "700", style: "normal" },
+    { path: "./fonts/Raleway-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "./fonts/Raleway-Medium.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/Raleway-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/Raleway-Light.ttf", weight: "300", style: "normal" },
   ],
 });
 
