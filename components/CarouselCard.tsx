@@ -8,7 +8,7 @@ const CarouselCard = ({ category }: { category: string }) => {
   const router = useRouter();
   const { push } = router;
   const handleClick = () => {
-    push(`/?category=${category}`);
+    push(`/?search=${category}`);
   };
 
   return (

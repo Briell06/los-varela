@@ -6,7 +6,10 @@ import Results from "./Results";
 const SearchPage = async ({ products, search }: PageProps) => {
   const filteredProducts = products.filter((product) => {
     if (search) {
-      return product.title.toLowerCase().includes(search.toLowerCase());
+      return (
+        product.title.toLowerCase().includes(search.toLowerCase()) ||
+        product.category.toLowerCase().includes(search.toLowerCase())
+      );
     }
   });
 

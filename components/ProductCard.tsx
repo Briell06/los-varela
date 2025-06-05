@@ -1,103 +1,84 @@
-"use client";
+import { cn } from "@/lib/utils";
 import { Product } from "@/utils/types";
-import { Minus, Plus, ShoppingCart } from "lucide-react";
+import { ArrowLeft, ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import Link from "next/link";
+import CardFooterCartButton from "./CardFooterCartButton";
+import CardFooterForm from "./CardFooterForm";
 import { Button } from "./ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { Input } from "./ui/input";
 
 interface Props {
   product: Product;
+  containerClassName?: string;
+  arrowRight?: boolean;
+  arrowLeft?: boolean;
 }
 
-const ProductCard = ({ product }: Props) => {
-  const [amount, setAmount] = useState(1);
-
-  const handleIncrement = () => {
-    setAmount((prev) => prev + 1);
-  };
-
-  const handleDecrement = () => {
-    setAmount((prev) => (prev > 1 ? prev - 1 : 1));
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value, 10);
-
-    if (!value) setAmount(0);
-    if (value >= 0) setAmount(value);
-  };
-
+const ProductCard = ({
+  product,
+  containerClassName,
+  arrowRight,
+  arrowLeft,
+}: Props) => {
   return (
-    <Card>
-      <CardHeader className="lg:h-50 xl:h-45">
-        <CardTitle className="text-3xl">{product.title}</CardTitle>
-        <CardDescription>{product.description}</CardDescription>
+    <Card className={cn(containerClassName ?? "")}>
+      <CardHeader className="">
+        <Link href={`/productos/${product.id}`}>
+          <CardTitle className="text-3xl">{product.title}</CardTitle>
+        </Link>
+        <Link
+          className="w-fit hover:underline"
+          href={`/?search=${product.category}`}
+        >
+          {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
+        </Link>
       </CardHeader>
       <CardContent className="relative my-auto">
-        <Image
-          src={product.thumbnail}
-          className="rounded-lg"
-          width={700}
-          height={700}
-          alt="image"
-        />
+        <Link href={`/productos/${product.id}`}>
+          <Image
+            src={product.thumbnail}
+            className="rounded-lg"
+            width={500}
+            height={500}
+            alt="image"
+          />
+        </Link>
         <span className="absolute top-0 text-2xl font-bold">
           {product.price}
         </span>
       </CardContent>
       <CardFooter>
         <div className="flex w-full items-center justify-between">
-          <div className="flex gap-0.5">
-            <Button
-              size="icon"
-              role="button"
-              aria-labelledby="decrementar cantidad"
-              aria-label="decrementar cantidad"
-              onClick={handleDecrement}
-              variant={"ghost"}
-              className="rounded-full"
-            >
-              <Minus />
-            </Button>
-            <Input
-              type="number"
-              aria-label="cantidad"
-              aria-describedby="cantidad de productos"
-              value={amount.toFixed(0)}
-              onChange={handleChange}
-              className="w-10 [appearance:textfield] px-0 text-center shadow-xs [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
-            />
-            <Button
-              size="icon"
-              role="button"
-              aria-label="incrementar cantidad"
-              aria-labelledby="incrementar cantidad"
-              onClick={handleIncrement}
-              variant="ghost"
-              className="rounded-full"
-            >
-              <Plus />
-            </Button>
-          </div>
-          <Button
-            aria-label="añadir al carrito"
-            variant={"secondary"}
-            className="text-md font-bold shadow-md dark:shadow-black"
-          >
-            <ShoppingCart />
-            Añadir al carrito
-          </Button>
+          <CardFooterForm />
+          <CardFooterCartButton />
         </div>
       </CardFooter>
+      {arrowRight && (
+        <Button
+          size="icon"
+          variant="secondary"
+          className="absolute top-3/6 right-2 animate-bounce rounded-full md:hidden"
+        >
+          <ArrowRightIcon className="text-lg" />
+        </Button>
+      )}
+
+      {arrowLeft && (
+        <Button
+          size="icon"
+          variant="secondary"
+          className="absolute top-3/6 left-2 animate-bounce rounded-full md:hidden"
+        >
+          <ArrowLeft className="text-lg" />
+        </Button>
+      )}
     </Card>
   );
 };

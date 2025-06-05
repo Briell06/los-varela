@@ -2,7 +2,7 @@ import FooterLink from "@/components/FooterLink";
 import { footerLinks } from "@/utils/constants";
 import { Copyright } from "lucide-react";
 
-function Footer() {
+async function Footer() {
   return (
     <footer
       role="contentinfo"
@@ -31,7 +31,7 @@ function Footer() {
 
           <div className="mx-auto flex flex-col gap-4 font-bold md:flex-row md:gap-8">
             {/*   Nav Links   */}
-            {footerLinks.map((link) => (
+            {footerLinks.map(async (link) => (
               <FooterLink key={link.endpoint} {...link} />
             ))}
           </div>
