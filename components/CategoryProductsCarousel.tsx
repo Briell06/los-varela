@@ -16,7 +16,7 @@ const CategoryProductsCarousel = ({ products }: Props) => {
   return (
     <div className="my-10 px-5">
       <p className="my-5 text-center text-3xl font-bold">
-        Otros Productos de la categoría{" "}
+        Otros productos de la categoría{" "}
         <span className="font-extrabold text-blue-600">
           &quot;
           {products[0].category.charAt(0).toUpperCase() +
