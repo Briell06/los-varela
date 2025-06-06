@@ -70,7 +70,6 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "sanity",
     "ignore.virus.scanning.warn.message": "true",
     "js.debugger.nextJs.config.created.client": "true",
     "junie.onboarding.icon.badge.shown": "true",
@@ -84,7 +83,7 @@
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Briell\\Trabajos\\Lemay\\frontend\\node_modules\\prettier",
     "settings.editor.selected.configurable": "editor.preferences.appearance",
-    "ts.external.directory.path": "C:\\Briell\\Trabajos\\Lemay\\frontend\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -133,7 +132,7 @@
       <workItem from="1749173173747" duration="98000" />
       <workItem from="1749173551520" duration="2143000" />
       <workItem from="1749175733266" duration="26000" />
-      <workItem from="1749175771103" duration="2185000" />
+      <workItem from="1749175771103" duration="2521000" />
     </task>
     <servers />
   </component>
